@@ -5,7 +5,7 @@ export default class VideoList extends React.Component {
 
 //key could be etag from YT API (videoClip.etag)
   createVideoList(videoClip, i) {
-    console.log(videoClip);
+    // console.log(videoClip);
     return (
       <VideoListItem
         key = {i}
@@ -19,6 +19,7 @@ export default class VideoList extends React.Component {
       <ul>
         {this.props.videosArr.map(this.createVideoList)}
       </ul>
+
     )
   }
 }
