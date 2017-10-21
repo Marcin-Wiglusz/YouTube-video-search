@@ -8,15 +8,23 @@ import VideoPlayer from './Video_Player';
 const ApiKey = 'AIzaSyDJS8d7gktqvFwX5XYRR-LMeaBaiNHPaiU';
 
 export default class App extends React.Component {
-  constructor() {
-    super();
-
+  constructor(props) {
+    super(props);
+    // console.log(this.props);
     this.state = {
-      videos : []
+      videos: [],
+      selected: null
     }
 
-    YouTubeSearch({key: ApiKey, term: 'kadavar'}, (data) => {this.setState({videos: data});
+
+
+    YouTubeSearch({key: ApiKey, term: 'kadavar'}, (data) => {this.setState(
+      {videos: data, selected: data[0]});
     })
+  }
+
+  onVideoSelect() {
+    this.setState(selected: selected)
   }
 
   render() {
@@ -24,8 +32,11 @@ export default class App extends React.Component {
     return (
       <div>
         <SearchBar />
-        <VideoPlayer video = {this.state.videos[3]}/>
-        <VideoList videosArr = {this.state.videos}/>
+        <VideoPlayer
+          video = {this.state.selected} />
+        <VideoList
+          onVideoSelect = {this.onVideoSelect.bind(this)}
+          videosArr = {this.state.videos} />
       </div>
     );
   }

@@ -5,11 +5,11 @@ export default class VideoPlayer extends React.Component{
   render() {
     let video = this.props.video;
     // App is rendering before YT fills videos array and video is undefined.
-    //if there is no video yet, return below div
     if (!video) {
+      //if there is no video yet, return below div
       return <div>Wait for it...</div>
     }
-
+    // console.log(video);
     let id = video.id.videoId;
     let url = `https://www.youtube.com/embed/${id}`;
 
