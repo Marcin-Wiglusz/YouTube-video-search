@@ -9,12 +9,17 @@ export default class SearchBar extends React.Component {
     };
   }
 
+  onInputSearch(term) {
+    this.setState({term});
+    this.props.onSearchVideo(term)
+  }
+
   render() {
     return(
       <div>
         <input
           value = {this.state.term}
-          onChange = {evt => this.setState({term: evt.target.value})} />
+          onChange = {evt => this.onInputSearch(evt.target.value)} />
       </div>
     );
   }

@@ -16,27 +16,24 @@ export default class App extends React.Component {
       selected: null
     }
 
-    YouTubeSearch({key: ApiKey, term: 'kadavar'}, (data) => {this.setState(
+    this.searchVideo('kadavar');
+  }
+
+  searchVideo(term) {
+    YouTubeSearch({key: ApiKey, term: term}, (data) => {this.setState(
       {videos: data, selected: data[0]});
     })
   }
 
-  // onVideoSelect(selected) {
-  //   // let selected = this.state.selected;
-  //   this.setState({selected})
-  // }
-
-
   render() {
-    // console.log(this.state.selected);
-    // let selected = this.state.selected;
+
     return (
       <div>
-        <SearchBar />
+        <SearchBar onSearchVideo = {term => this.searchVideo(term)}/>
         <VideoPlayer
           video = {this.state.selected} />
         <VideoList
-          onVideoSelect = {(selected) => this.setState({selected})}
+          onVideoSelect = {selected => this.setState({selected})}
           videosArr = {this.state.videos} />
       </div>
     );
