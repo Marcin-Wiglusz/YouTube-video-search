@@ -9,6 +9,16 @@ export default class SearchBar extends React.Component {
     };
   }
 
+  handleKeyPress(evt) {
+    if (evt.key == 'Enter') {
+      this.onInputSearch(evt.target.value)
+    }
+  }
+
+  onClickSearch(evt){
+    this.onInputSearch(evt.target.value)
+  }
+
   onInputSearch(term) {
     this.setState({term});
     this.props.onSearchVideo(term)
@@ -19,8 +29,11 @@ export default class SearchBar extends React.Component {
       <div>
         <input
           value = {this.state.term}
-          onChange = {evt => this.onInputSearch(evt.target.value)} />
+          onChange = {evt => this.setState({term: evt.target.value})}
+          onKeyPress = {this.handleKeyPress.bind(this)} />
+        <button onClick = {() => this.onClickSearch()}>Search</button>
       </div>
     );
   }
 }
+// {evt => this.onInputSearch(evt.target.value)}
