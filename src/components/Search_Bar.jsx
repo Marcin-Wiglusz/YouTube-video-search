@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../styles/search_bar.css';
 
 export default class SearchBar extends React.Component {
   constructor() {
@@ -11,7 +11,7 @@ export default class SearchBar extends React.Component {
   }
 
   handleKeyPress(evt) {
-    if (evt.key == 'Enter') {
+    if (evt.key === 'Enter') {
       this.onInputSearch(this.refs.searchTerm.value)
     }
   }
@@ -27,13 +27,16 @@ export default class SearchBar extends React.Component {
 
   render() {
     return(
-      <div>
-        <input
-          value = {this.state.term}
-          ref = 'searchTerm'
-          onChange = {() => this.setState({term: this.refs.searchTerm.value})}
-          onKeyPress = {this.handleKeyPress.bind(this)} />
-        <button onClick = {this.onClickSearch.bind(this)}>Search</button>
+      <div className='search-bar'>
+        <div className='input-wrap'>
+          <input
+            value = {this.state.term}
+            ref = 'searchTerm'
+            onChange = {() => this.setState({term: this.refs.searchTerm.value})}
+            onKeyPress = {this.handleKeyPress.bind(this)} />
+          <button onClick = {this.onClickSearch.bind(this)}>Search
+          </button>
+        </div>
       </div>
     );
   }

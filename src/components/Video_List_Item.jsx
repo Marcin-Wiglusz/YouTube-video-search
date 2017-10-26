@@ -1,9 +1,10 @@
 import React from 'react';
+import '../styles/video_player.css';
 
 export default class VideoListItem extends React.Component{
 
   render() {
-    
+
     let video = this.props.video;
     return(
       <li onClick = {() => this.props.onVideoSelect(video)}>

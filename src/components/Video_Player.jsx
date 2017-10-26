@@ -13,8 +13,8 @@ export default class VideoPlayer extends React.Component{
     let url = `https://www.youtube.com/embed/${id}`;
 
     return(
-      <div>
-        <iframe src = {url}></iframe>
+      <div className='player'>
+        <iframe src = {url} title = 'player'></iframe>
         <div>
           <div>{video.snippet.title}</div>
           <div>{video.snippet.description}</div>
