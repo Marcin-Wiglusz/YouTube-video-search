@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default class SearchBar extends React.Component {
   constructor() {
     super();
@@ -37,4 +38,3 @@ export default class SearchBar extends React.Component {
     );
   }
 }
-// {evt => this.onInputSearch(evt.target.value)}

@@ -4,13 +4,15 @@ import SearchBar from './Search_Bar';
 import VideoList from './Video_List';
 import VideoPlayer from './Video_Player';
 
+import '../styles/app.css';
+
 //parent component should be responsible for fetching data
 const ApiKey = 'AIzaSyDJS8d7gktqvFwX5XYRR-LMeaBaiNHPaiU';
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    // console.log(this.props);
+  constructor() {
+    super();
+
     this.state = {
       videos: [],
       selected: null
@@ -19,8 +21,10 @@ export default class App extends React.Component {
     this.searchVideo('kadavar');
   }
 
+
+
   searchVideo(term) {
-    YouTubeSearch({key: ApiKey, term: term}, (data) => {this.setState(
+    YouTubeSearch({key: ApiKey, term: term, maxResults: 50}, (data) => {this.setState(
       {videos: data, selected: data[0]});
     })
   }
@@ -29,9 +33,8 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <SearchBar onSearchVideo = {term => this.searchVideo(term)}/>
-        <VideoPlayer
-          video = {this.state.selected} />
+        <SearchBar onSearchVideo = {term => this.searchVideo(term)} />
+        <VideoPlayer video = {this.state.selected} />
         <VideoList
           onVideoSelect = {selected => this.setState({selected})}
           videosArr = {this.state.videos} />

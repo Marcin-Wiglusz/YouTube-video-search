@@ -9,7 +9,6 @@ export default class VideoPlayer extends React.Component{
       //if there is no video yet, return below div
       return <div>Wait for it...</div>
     }
-    // console.log(video);
     let id = video.id.videoId;
     let url = `https://www.youtube.com/embed/${id}`;
 
