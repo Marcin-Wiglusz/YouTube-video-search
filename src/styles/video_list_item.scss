@@ -1,0 +1,10 @@
+@import "./normalize.scss";
+@import "./modules/media.scss";
+
+@media #{$smSmart} {
+
+  .list-item{
+    display: flex;
+    padding: 0 16px;
+  }
+}

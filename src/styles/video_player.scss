@@ -3,12 +3,63 @@
 
 @media #{$smSmart} {
   .player{
-    // width: 100%;
-    // height: 270px;
 
     iframe{
       width: 100%;
-      // height: 270px;
+      height: 270px;
+    }
+
+    .player-text{
+      padding: 16px;
+      // display: flex;
+
+      h1{
+        font-size: 18px;
+        font-weight: normal;
+      }
+
+      .text-wrapper{
+        display: flex;
+        justify-content: space-between;
+
+        .channel{
+          margin: 8px 0 6px 0;
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        .drop{
+          margin-top: 13px;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+        }
+
+        .down{
+          border-top: 8px solid #222;
+          border-bottom: none;
+        }
+
+        .up{
+          border-top: none;
+          border-bottom: 8px solid #222;
+        }
+      }
+
+      .descr{
+        padding: 10px 0;
+        font-size: 14px;
+        color: #767676;
+      }
+
+      .hide{
+        display: none;
+      }
+
+      .show{
+        display: inline-block;
+      }
     }
   }
 }

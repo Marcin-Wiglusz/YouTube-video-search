@@ -16,28 +16,27 @@ ol, ul {
 @media (max-width: 480px) {
   .search-div {
     background-color: #565555;
-    height: 50px;
+    height: 2.813em;
     display: flex;
-    align-items: center;
-    margin-bottom: 30px; }
+    align-items: center; }
     .search-div .logo {
       background-image: url("../img/youtube.svg");
       height: 68%;
-      width: 50px;
+      width: 3.125em;
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      margin: 0 5px; }
+      margin: 0 0.313em; }
     .search-div .forms-wrap {
       width: 100%; }
       .search-div .forms-wrap input:focus, .search-div .forms-wrap button:focus {
         outline: none; }
       .search-div .forms-wrap input {
         width: 78%;
-        height: 25px;
-        border: 1px solid #a8a4a4;
-        border-radius: 3px;
-        padding-left: 5px; }
+        height: 1.875em;
+        border: none;
+        border-radius: 0.225em;
+        padding: 0 0 0 0.375em; }
       .search-div .forms-wrap .hide {
         display: none; }
       .search-div .forms-wrap .show {
@@ -45,13 +44,13 @@ ol, ul {
       .search-div .forms-wrap button {
         background-color: #565555;
         border: none;
-        height: 25px;
-        width: 50px;
+        height: 1.875em;
+        width: 3.750em;
         padding: 0;
         cursor: pointer;
         position: absolute;
-        right: 10px;
-        top: 14px; }
+        right: 0.750em;
+        top: 0.813em; }
         .search-div .forms-wrap button svg {
           height: 100%;
           width: 100%; }

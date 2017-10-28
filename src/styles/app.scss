@@ -4,13 +4,17 @@
 
 body{
   font-family: 'Roboto', sans-serif;
+
+  .container{
+    color: #222;
+  }
 }
 *{
   box-sizing: border-box;
 }
 
 *, div{
-  // border: 1px solid red;
+  border: 1px solid red;
 }
 
 .main{
