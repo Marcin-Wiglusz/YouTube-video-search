@@ -24,7 +24,7 @@ export default class App extends React.Component {
 
 
   searchVideo(term) {
-    YouTubeSearch({key: ApiKey, term: term, maxResults: 50}, (data) => {this.setState(
+    YouTubeSearch({key: ApiKey, term: term}, (data) => {this.setState(
       {videos: data, selected: data[0]});
     })
   }
@@ -32,9 +32,9 @@ export default class App extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className='main'>
         <SearchBar onSearchVideo = {term => this.searchVideo(term)} />
-        <div className='main'>
+        <div className='container'>
           <VideoPlayer video = {this.state.selected} />
           <VideoList
             onVideoSelect = {selected => this.setState({selected})}
