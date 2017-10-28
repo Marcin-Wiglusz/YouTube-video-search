@@ -37,7 +37,8 @@ export default class VideoPlayer extends React.Component{
             </p>
             <div
               onClick = {() => this.toggleClass()}
-              className = {this.state.active ? 'drop down' : 'drop up'}></div>
+              className = {this.state.active ? 'drop down' : 'drop up'}>              
+            </div>
           </div>
           <p
             className = {this.state.active ? 'descr hide' : 'descr show'}>

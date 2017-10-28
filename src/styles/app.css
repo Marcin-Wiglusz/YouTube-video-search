@@ -18,12 +18,12 @@ body {
   font-family: 'Roboto', sans-serif; }
   body .container {
     color: #222; }
+    body .container a {
+      text-decoration: none;
+      color: #222; }
 
 * {
   box-sizing: border-box; }
-
-*, div {
-  border: 1px solid red; }
 
 .main {
   width: 100%; }

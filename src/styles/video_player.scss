@@ -4,13 +4,20 @@
 @media #{$smSmart} {
   .player{
 
+    hr{
+      margin-bottom: 0.938em;
+      border: none;
+      height: 0.063em;
+      background-color: #c9c5c5;
+    }
+
     iframe{
       width: 100%;
-      height: 270px;
+      height: 16.875em;
     }
 
     .player-text{
-      padding: 16px;
+      padding: 1.000em;
       // display: flex;
 
       h1{
@@ -23,33 +30,32 @@
         justify-content: space-between;
 
         .channel{
-          margin: 8px 0 6px 0;
+          margin: 0.571em 0 0.429em 0;
           font-size: 14px;
-          line-height: 18px;
         }
 
         .drop{
-          margin-top: 13px;
+          margin-top: 0.813em;
           width: 0;
           height: 0;
-          border-left: 8px solid transparent;
-          border-right: 8px solid transparent;
+          border-left: 0.500em solid transparent;
+          border-right: 0.500em solid transparent;
         }
 
         .down{
-          border-top: 8px solid #222;
+          border-top: 0.500em solid #222;
           border-bottom: none;
         }
 
         .up{
           border-top: none;
-          border-bottom: 8px solid #222;
+          border-bottom: 0.500em solid #222;
         }
       }
 
       .descr{
-        padding: 10px 0;
         font-size: 14px;
+        padding: 0.714em 0;        
         color: #767676;
       }
 

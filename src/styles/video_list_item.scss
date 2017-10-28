@@ -5,6 +5,22 @@
 
   .list-item{
     display: flex;
-    padding: 0 16px;
+    padding: 0 1.000em;
+    margin-bottom: 0.625em;
+
+    .list-item-descr{
+      padding-left: 0.500em;
+      padding-top: 0.125em;
+
+      .title{
+        font-size: 14px;
+        margin-bottom: 0.357em;
+      }
+
+      .channelTitle{
+        font-size: 13px;
+        color: #767676;
+      }
+    }
   }
 }

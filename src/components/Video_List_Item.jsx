@@ -9,17 +9,19 @@ export default class VideoListItem extends React.Component{
     console.log(video);
     return(
       <div>
-        <li
-          className = 'list-item'
-          onClick = {() => this.props.onVideoSelect(video)}>
-          <div>
-            <img src = {video.snippet.thumbnails.default.url} />
-          </div>
-          <div>
-            <p>{video.snippet.title}</p>
-            <p>{video.snippet.channelTitle}</p>
-          </div>
-        </li>
+        <a href = '#'>
+          <li
+            className = 'list-item'
+            onClick = {() => this.props.onVideoSelect(video)}>
+            <div>
+              <img src = {video.snippet.thumbnails.default.url} />
+            </div>
+            <div className = 'list-item-descr'>
+              <p className = 'title'>{video.snippet.title}</p>
+              <p className = 'channelTitle'>{video.snippet.channelTitle}</p>
+            </div>
+          </li>
+        </a>
       </div>
     )
   }

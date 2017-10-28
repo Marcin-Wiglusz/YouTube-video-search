@@ -34,6 +34,7 @@ export default class SearchBar extends React.Component {
   render() {
     return(
       <div className = 'search-div'>
+        <div><a href = '#'></a></div>
         <div className = 'logo'></div>
         <div className = 'forms-wrap'>
           <input
