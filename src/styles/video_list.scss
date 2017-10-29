@@ -1,0 +1,17 @@
+@import "./normalize.scss";
+@import "./modules/media.scss";
+
+@media #{$tablet} {
+
+  .list-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1%;
+
+    .tablet-list-item{
+      flex-grow: 1;
+      width: 30%;
+      margin: 1%;
+    }
+  }
+}

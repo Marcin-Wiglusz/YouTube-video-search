@@ -28,7 +28,9 @@ export default class VideoPlayer extends React.Component{
     return(
       <div className = 'player'>
         <hr className = 'top'/>
-        <iframe src = {url} title = 'player'></iframe>
+        <div className = 'video-clip'>
+          <iframe src = {url} title = 'player'></iframe>
+        </div>
         <div className = 'player-text'>
           <h1>{video.snippet.title}</h1>
           <div className = 'text-wrapper'>

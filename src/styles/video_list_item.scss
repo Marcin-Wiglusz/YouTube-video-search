@@ -24,3 +24,43 @@
     }
   }
 }
+
+@media #{$tablet} {
+
+  .list-item{
+    width: 100%;
+
+    // display: flex;
+    // padding: 0 1.000em;
+    // margin-bottom: 0.625em;
+
+    .img-container{
+      background-color: #000;
+
+      img{
+        // width: 60%;
+        // height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        // margin: auto;
+
+      }
+    }
+
+    .list-item-descr{
+      // padding-left: 0.500em;
+      padding: 4px 0 10px 0;
+
+      .title{
+        font-size: 14px;
+        margin-bottom: 0.357em;
+      }
+
+      .channelTitle{
+        font-size: 13px;
+        color: #767676;
+      }
+    }
+  }
+}

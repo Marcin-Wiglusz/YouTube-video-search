@@ -27,3 +27,21 @@ ol, ul {
       .list-item .list-item-descr .channelTitle {
         font-size: 13px;
         color: #767676; } }
+
+@media (min-width: 651px) and (max-width: 1025px) {
+  .list-item {
+    width: 100%; }
+    .list-item .img-container {
+      background-color: #000; }
+      .list-item .img-container img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block; }
+    .list-item .list-item-descr {
+      padding: 4px 0 10px 0; }
+      .list-item .list-item-descr .title {
+        font-size: 14px;
+        margin-bottom: 0.357em; }
+      .list-item .list-item-descr .channelTitle {
+        font-size: 13px;
+        color: #767676; } }
