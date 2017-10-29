@@ -1,14 +1,18 @@
 @import "./normalize.scss";
 @import "./modules/media.scss";
 
-@media #{$smSmart} {
+@media #{$smSmart}, #{$smart} {
   .player{
+
+    .top{
+      display: none;
+    }
 
     hr{
       margin-bottom: 0.938em;
       border: none;
       height: 0.063em;
-      background-color: #c9c5c5;
+      background-color: #e5e5e5;
     }
 
     iframe{
@@ -35,7 +39,7 @@
         }
 
         .drop{
-          margin-top: 0.813em;
+          margin-top: 0.688em;
           width: 0;
           height: 0;
           border-left: 0.500em solid transparent;
@@ -55,7 +59,7 @@
 
       .descr{
         font-size: 14px;
-        padding: 0.714em 0;        
+        padding: 0.714em 0;
         color: #767676;
       }
 
@@ -67,5 +71,19 @@
         display: inline-block;
       }
     }
+  }
+}
+
+@media #{$tablet} {
+
+  hr{
+    margin-bottom: 0.938em;
+    border: none;
+    height: 0.063em;
+    background-color: #e5e5e5;
+  }
+
+  .top{
+    margin-top: 0;
   }
 }

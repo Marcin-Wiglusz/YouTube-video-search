@@ -1,7 +1,7 @@
 @import "./normalize.scss";
 @import "./modules/media.scss";
 
-@media #{$smSmart} {
+@media #{$smSmart}, #{$smart} {
 
   .list-item{
     display: flex;

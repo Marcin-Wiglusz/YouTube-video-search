@@ -27,6 +27,7 @@ export default class VideoPlayer extends React.Component{
 
     return(
       <div className = 'player'>
+        <hr className = 'top'/>
         <iframe src = {url} title = 'player'></iframe>
         <div className = 'player-text'>
           <h1>{video.snippet.title}</h1>
@@ -37,7 +38,7 @@ export default class VideoPlayer extends React.Component{
             </p>
             <div
               onClick = {() => this.toggleClass()}
-              className = {this.state.active ? 'drop down' : 'drop up'}>              
+              className = {this.state.active ? 'drop down' : 'drop up'}>
             </div>
           </div>
           <p
