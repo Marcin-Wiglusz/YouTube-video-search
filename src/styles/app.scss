@@ -2,27 +2,37 @@
 @import "./modules/media.scss";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-body{
+body, input{
   font-family: 'Roboto', sans-serif;
 
+  .main{
+    width: 100%;
 
-  .container{
-    color: #222;
+    .top{
+      margin-top: 0;
+      margin-bottom: 0.938em;
+      border: none;
+      height: 0.063em;
+      background-color: #e5e5e5;
+      width: 100%;
+    }
 
-    a {
-      text-decoration: none;
+    .container{
       color: #222;
+
+      a {
+        text-decoration: none;
+        color: #222;
+      }
     }
   }
-}
-*{
-  box-sizing: border-box;
-}
 
-*, div{
-  // border: 1px solid red;
-}
+  *{
+    box-sizing: border-box;
+  }
 
-.main{
-  width: 100%;
+  // *, div{
+  //   border: 1px solid red;
+  // }
+
 }

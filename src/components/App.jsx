@@ -1,5 +1,6 @@
 import React from 'react';
 import YouTubeSearch from 'youtube-api-search';
+import MediaQuery from 'react-responsive';
 import SearchBar from './Search_Bar';
 import VideoList from './Video_List';
 import VideoPlayer from './Video_Player';
@@ -34,7 +35,10 @@ export default class App extends React.Component {
     return (
       <div className='main'>
         <SearchBar onSearchVideo = {term => this.searchVideo(term)} />
-        <div className='container'>
+        <MediaQuery minDeviceWidth = {650}>
+          <hr className = 'top'/>
+        </MediaQuery>
+        <div className = 'container'>
           <VideoPlayer video = {this.state.selected} />
           <VideoList
             onVideoSelect = {selected => this.setState({selected})}

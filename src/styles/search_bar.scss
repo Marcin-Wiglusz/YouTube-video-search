@@ -1,6 +1,8 @@
 @import "./normalize.scss";
 @import "./modules/media.scss";
 
+///////////////////MOBILE//////////////////////////
+
 @media #{$smSmart}, #{$smart}{
 
   .search-div{
@@ -63,11 +65,12 @@
   }
 }
 
+///////////////////TABLET//////////////////////////
+
 @media #{$tablet} {
   .search-div{
-    height: 56px;
+    height: 3.500em;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
 
     .logo{
@@ -82,27 +85,25 @@
 
     .forms-wrap{
       width: 80%;
-      // margin: auto;
-      // border:1px solid #a8a4a4;
       display: flex;
       justify-content: center;
-      // padding-left: 20px;
-      // border: none;
 
       input:focus, button:focus{
         outline: none;
       }
 
       input{
+        font-size: 16px;
         width: 78%;
         height: 1.875em;
         border:1px solid #a8a4a4;
         border-radius: 0.225em 0 0 0.225em;
         border-right: 0;
-        padding: 0 0 0 0.375em;
+        padding: 0.125em 0 0.125em 0.313em;
       }
 
       button{
+        font-size: 16px;
         border-radius: 0 0.225em 0.225em 0;
         background-color: #f1f1fe;
         border:1px solid #a8a4a4;
@@ -119,16 +120,76 @@
           }
         }
       }
+    }
+  }
+}
 
-      // button:hover{
-      //   background-color: #ececec;
-      //   background-color: #565555;
-      //
-      //   path{
-      //     fill: #616161;
-      //     fill: #fff;
-      //   }
-      // }
+///////////////////DESKTOP//////////////////////////
+
+@media #{$desktop} {
+
+  .search-div{
+    height: 3.500em;
+    display: flex;
+    align-items: center;
+
+    .logo{
+      background-image: url('../img/yt_logo_rgb_light.png');
+      height: 70%;
+      width: 6.250em;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: 0 1.250em;
+    }
+
+    .forms-wrap{
+      width: 80%;
+      display: flex;
+      justify-content: center;
+
+      button:focus{
+        outline: none;
+      }
+
+      input{
+        font-size: 16px;
+        width: 80%;
+        height: 2.000em;
+        border:1px solid #a8a4a4;
+        border-radius: 0.188em 0 0 0.188em;
+        border-right: 0;
+        padding: 0.125em 0 0.125em 0.313em;
+
+      }
+
+      button{
+        font-size: 16px;
+        border-radius: 0 0.188em 0.188em 0;
+        background-color: #f1f1fe;
+        border:1px solid #a8a4a4;
+        height: 2.000em;
+        width: 4.000em;
+        padding: 0;
+        cursor: pointer;
+
+        svg{
+          height: 100%;
+          width: 100%;
+
+          path{
+            fill: #a0a0a0;
+          }
+        }
+      }
+
+      button:hover{
+        background-color: #ececec;
+
+        path{
+          fill: #616161;
+        }
+      }
     }
   }
 }

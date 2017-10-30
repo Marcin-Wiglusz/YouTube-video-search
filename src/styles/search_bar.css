@@ -58,9 +58,8 @@ ol, ul {
 
 @media (min-width: 651px) and (max-width: 1025px) {
   .search-div {
-    height: 56px;
+    height: 3.500em;
     display: flex;
-    flex-wrap: wrap;
     align-items: center; }
     .search-div .logo {
       background-image: url("../img/yt_logo_rgb_light.png");
@@ -77,13 +76,15 @@ ol, ul {
       .search-div .forms-wrap input:focus, .search-div .forms-wrap button:focus {
         outline: none; }
       .search-div .forms-wrap input {
+        font-size: 16px;
         width: 78%;
         height: 1.875em;
         border: 1px solid #a8a4a4;
         border-radius: 0.225em 0 0 0.225em;
         border-right: 0;
-        padding: 0 0 0 0.375em; }
+        padding: 0.125em 0 0.125em 0.313em; }
       .search-div .forms-wrap button {
+        font-size: 16px;
         border-radius: 0 0.225em 0.225em 0;
         background-color: #f1f1fe;
         border: 1px solid #a8a4a4;
@@ -95,3 +96,49 @@ ol, ul {
           width: 100%; }
           .search-div .forms-wrap button svg path {
             fill: #a0a0a0; } }
+
+@media (min-width: 1026px) {
+  .search-div {
+    height: 3.500em;
+    display: flex;
+    align-items: center; }
+    .search-div .logo {
+      background-image: url("../img/yt_logo_rgb_light.png");
+      height: 70%;
+      width: 6.250em;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: 0 1.250em; }
+    .search-div .forms-wrap {
+      width: 80%;
+      display: flex;
+      justify-content: center; }
+      .search-div .forms-wrap button:focus {
+        outline: none; }
+      .search-div .forms-wrap input {
+        font-size: 16px;
+        width: 80%;
+        height: 2.000em;
+        border: 1px solid #a8a4a4;
+        border-radius: 0.188em 0 0 0.188em;
+        border-right: 0;
+        padding: 0.125em 0 0.125em 0.313em; }
+      .search-div .forms-wrap button {
+        font-size: 16px;
+        border-radius: 0 0.188em 0.188em 0;
+        background-color: #f1f1fe;
+        border: 1px solid #a8a4a4;
+        height: 2.000em;
+        width: 4.000em;
+        padding: 0;
+        cursor: pointer; }
+        .search-div .forms-wrap button svg {
+          height: 100%;
+          width: 100%; }
+          .search-div .forms-wrap button svg path {
+            fill: #a0a0a0; }
+      .search-div .forms-wrap button:hover {
+        background-color: #ececec; }
+        .search-div .forms-wrap button:hover path {
+          fill: #616161; } }

@@ -1,12 +1,10 @@
 @import "./normalize.scss";
 @import "./modules/media.scss";
 
+///////////////////MOBILE//////////////////////////
+
 @media #{$smSmart}, #{$smart} {
   .player{
-
-    .top{
-      display: none;
-    }
 
     hr{
       margin-bottom: 0.938em;
@@ -16,24 +14,23 @@
     }
 
     .video-clip{
-      position:relative;
-    	padding-bottom:56.25%;
-    	padding-top:30px;
-    	height:0;
-    	overflow:hidden;
+      position: relative;
+    	padding-bottom: 56.25%;
+    	padding-top: 1.875em;
+    	height: 0;
+    	overflow: hidden;
 
       iframe{
-        position:absolute;
-      	top:0;
-      	left:0;
-      	width:100%;
-      	height:100%;
+        position: absolute;
+      	top: 0;
+      	left: 0;
+      	width: 100%;
+      	height: 100%;
       }
     }
 
     .player-text{
       padding: 1.000em;
-      // display: flex;
 
       h1{
         font-size: 18px;
@@ -45,8 +42,8 @@
         justify-content: space-between;
 
         .channel{
-          margin: 0.571em 0 0.429em 0;
           font-size: 14px;
+          margin: 0.571em 0 0.429em 0;
         }
 
         .drop{
@@ -85,6 +82,8 @@
   }
 }
 
+///////////////////TABLET//////////////////////////
+
 @media #{$tablet} {
   .player{
 
@@ -95,18 +94,13 @@
       background-color: #e5e5e5;
     }
 
-    .top{
-      margin-top: 0;
-    }
-
     iframe{
       width: 100%;
-      height: 460px;;
+      height: 28.750em;
     }
 
     .player-text{
       padding: 1.000em;
-      // display: flex;
 
       h1{
         font-size: 18px;
@@ -118,8 +112,8 @@
         justify-content: space-between;
 
         .channel{
-          margin: 0.571em 0 0.429em 0;
           font-size: 14px;
+          margin: 0.571em 0 0.429em 0;
         }
 
         .drop{
@@ -156,5 +150,87 @@
       }
     }
   }
+}
 
+///////////////////DESKTOP//////////////////////////
+
+
+
+@media #{$desktop} {
+
+  .container{
+    width: 70%;
+    padding-top: 0.313em;
+    margin: auto;
+    display: flex;
+
+    .player{
+      padding: 0 0.625em;
+
+      hr{
+        margin-bottom: 0.938em;
+        border: none;
+        height: 0.063em;
+        background-color: #e5e5e5;
+      }
+
+      iframe{
+        width: 53.125em;
+        height: 30.000em;
+      }
+
+      .player-text{
+        padding: 1.000em;
+        padding-left: 0;
+
+        h1{
+          font-size: 18px;
+          font-weight: normal;
+        }
+
+        .text-wrapper{
+          display: flex;
+          justify-content: space-between;
+
+          .channel{
+            font-size: 14px;
+            margin: 0.571em 0 0.429em 0;
+
+          }
+
+          .drop{
+            margin-top: 0.688em;
+            width: 0;
+            height: 0;
+            border-left: 0.500em solid transparent;
+            border-right: 0.500em solid transparent;
+          }
+
+          .down{
+            border-top: 0.500em solid #222;
+            border-bottom: none;
+          }
+
+          .up{
+            border-top: none;
+            border-bottom: 0.500em solid #222;
+          }
+        }
+
+        .descr{
+          font-size: 14px;
+          padding: 0.714em 0;
+          color: #767676;
+        }
+
+        .hide{
+          display: none;
+        }
+
+        .show{
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
