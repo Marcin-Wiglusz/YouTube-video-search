@@ -137,7 +137,8 @@ ol, ul {
             width: 0;
             height: 0;
             border-left: 0.500em solid transparent;
-            border-right: 0.500em solid transparent; }
+            border-right: 0.500em solid transparent;
+            cursor: pointer; }
           .container .player .player-text .text-wrapper .down {
             border-top: 0.500em solid #222;
             border-bottom: none; }
